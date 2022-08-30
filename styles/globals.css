@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-black dark:bg-zinc-800 dark:text-white;
+    @apply min-h-screen;
+  }
+
+  ::selection {
+    @apply text-white bg-green-600;
+  }
+}
