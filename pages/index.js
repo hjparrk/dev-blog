@@ -1,18 +1,23 @@
+import { useState } from "react";
+import AboutItemsList from "../components/home/about-items-list";
+import Welcoming from "../components/home/welcoming";
 import { deleteAboutItemByTitle, getAllAboutItems } from "../helpers/api-util";
 
 const Home = (props) => {
+  const [showWelcoming, setShowWelcoming] = useState(false);
+
+  function showWelcomingHandler() {
+    setShowWelcoming(true);
+  }
+
   const aboutItems = props.aboutItems;
 
-  const content = (
-    <>
-      {aboutItems.map((item) => (
-        <div key={item.title} className="m-5 p-5">
-          <h1>{item.title}</h1>
-          <h1>{item.subtitle}</h1>
-          <h1>{item.description}</h1>
-        </div>
-      ))}
-    </>
+  const content = showWelcoming ? (
+    <div className="flex flex-col justify-center items-center">
+      <AboutItemsList aboutItems={aboutItems} />
+    </div>
+  ) : (
+    <Welcoming onShowWelcoming={showWelcomingHandler} />
   );
 
   async function clickHandler() {
@@ -22,7 +27,6 @@ const Home = (props) => {
 
   return (
     <div className="flex justify-center items-center flex-col">
-      <h1 className="text-5xl">Home</h1>
       <div className="flex flex-col justify-center items-center">{content}</div>
       {/* <button onClick={clickHandler} type="button">
         DELETE
