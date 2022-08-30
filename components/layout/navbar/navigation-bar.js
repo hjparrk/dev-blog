@@ -12,7 +12,7 @@ const NavigationBar = () => {
 
     if (currentTheme === "dark") {
       return (
-        <div className="mb-1 border-2 p-1 border-white rounded-xl">
+        <div className="mb-2 border-2 p-1 border-white rounded-xl">
           <IoSunny
             className="w-5 h-5"
             role="button"
@@ -22,7 +22,7 @@ const NavigationBar = () => {
       );
     } else {
       return (
-        <div className="mb-1 border-2 p-1 border-zinc-800 rounded-xl">
+        <div className="mb-2 border-2 p-1 border-zinc-800 rounded-xl">
           <IoMoon
             className="w-5 h-5"
             role="button"

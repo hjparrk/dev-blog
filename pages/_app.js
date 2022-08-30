@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
         <AnimatePresence mode="wait">
           <Layout>
             <Head>
-              <title>Home - HJPark</title>
+              <title>Hyojoon - Dev</title>
               <meta
                 name="viewport"
                 content="initial-scale=1.0, width=device-width"
