@@ -3,8 +3,6 @@ import { deleteAboutItemByTitle, getAllAboutItems } from "../helpers/api-util";
 const Home = (props) => {
   const aboutItems = props.aboutItems;
 
-  console.log(aboutItems);
-
   const content = (
     <>
       {aboutItems.map((item) => (
@@ -33,7 +31,7 @@ const Home = (props) => {
   );
 };
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps() {
   const aboutItems = await getAllAboutItems();
 
   return {

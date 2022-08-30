@@ -84,8 +84,9 @@ const Links = () => {
 };
 
 const styles = {
-  notOnPage: "mx-3 pb-1.5 text-xl",
-  onPage: "mx-3 pb-1.5 border-b-2 border-cyan-500 text-cyan-500 text-xl",
+  notOnPage: "mx-3 pb-1.5 text-xl cursor-pointer",
+  onPage:
+    "mx-3 pb-1.5 border-b-2 border-cyan-500 text-cyan-500 text-xl cursor-pointer",
   logout: "ml-3 p-1.5 border-2 border-black rounded-lg dark:border-white",
 };
 

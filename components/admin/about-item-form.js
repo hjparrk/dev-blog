@@ -13,7 +13,7 @@ const AboutItemForm = () => {
     const enteredSubtitle = subtitleInputRef.current.value;
     const enteredDescription = descriptionInputRef.current.value;
 
-    await axios.post("/api/home/aboutItem", {
+    await axios.post("/api/home/about-item", {
       title: enteredTitle,
       subtitle: enteredSubtitle,
       description: enteredDescription,

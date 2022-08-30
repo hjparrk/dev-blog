@@ -12,7 +12,7 @@ const NavigationBar = () => {
 
     if (currentTheme === "dark") {
       return (
-        <div className="border-2 p-1 border-white rounded-xl">
+        <div className="mb-1 border-2 p-1 border-white rounded-xl">
           <IoSunny
             className="w-5 h-5"
             role="button"
@@ -22,7 +22,7 @@ const NavigationBar = () => {
       );
     } else {
       return (
-        <div className="border-2 p-1 border-zinc-800 rounded-xl">
+        <div className="mb-1 border-2 p-1 border-zinc-800 rounded-xl">
           <IoMoon
             className="w-5 h-5"
             role="button"
@@ -58,7 +58,7 @@ const NavigationBar = () => {
 
 const styles = {
   navbar:
-    "flex flex-row justify-between mb-20 py-8 px-32 border-b-2 border-black dark:border-white bg-white dark:bg-zinc-800",
+    "flex flex-row justify-between mb-20 py-4 px-32 border-b-2 border-gray-400 dark:border-white bg-white dark:bg-zinc-800",
   links: "flex flex-row",
 };
 
