@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 function Welcoming(props) {
   return (
-    <div className="flex flex-col items-center mb-40">
+    <div className="flex flex-col items-center mb-14">
       <h1 className="mt-40 mb-12 font-bold text-5xl">
         Wanna &nbsp;explore &nbsp;my &nbsp;blog?
       </h1>

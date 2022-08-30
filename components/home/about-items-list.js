@@ -17,13 +17,13 @@ const AboutItemsList = (props) => {
           key={item.title}
           className={conatiner_style}
         >
-          <div className="m-5 text-5xl font-extrabold">
+          <div className="m-5 text-4xl font-extrabold">
             <h1>{item.title}</h1>
           </div>
-          <div className="m-5 text-3xl font-bold">
+          <div className="m-5 text-2xl font-bold">
             <h1>{item.subtitle}</h1>
           </div>
-          <div className="m-5 text-2xl">
+          <div className="m-5 text-xl">
             <h1>{item.description}</h1>
           </div>
         </motion.div>
@@ -34,9 +34,9 @@ const AboutItemsList = (props) => {
 
 const styles = {
   container_light:
-    "m-10 p-6 max-w-4xl text-black hover:bg-gray-200 flex flex-col justify-center items-start rounded-3xl",
+    "m-10 p-6 max-w-3xl text-black hover:bg-gray-200 flex flex-col justify-center items-start rounded-3xl",
   container_dark:
-    "m-10 p-10 max-w-4xl text-white hover:text-black hover:bg-gray-200 flex flex-col justify-center items-start rounded-2xl",
+    "m-10 p-6 max-w-3xl text-white hover:text-black hover:bg-gray-200 flex flex-col justify-center items-start rounded-2xl",
 };
 
 export default AboutItemsList;

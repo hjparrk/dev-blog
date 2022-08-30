@@ -15,8 +15,8 @@ const routes = [
     title: "Blog",
   },
   {
-    href: "/contact",
-    title: "Contact",
+    href: "/personal",
+    title: "Personal",
   },
 ];
 
