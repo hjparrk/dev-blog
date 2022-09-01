@@ -58,7 +58,7 @@ const NavigationBar = () => {
 
 const styles = {
   navbar:
-    "flex flex-row flex-wrap justify-between mb-20 py-4 px-32 border-b-2 border-gray-400 dark:border-white bg-white dark:bg-zinc-800",
+    "flex flex-row flex-wrap justify-between mb-20 py-4 lg:px-32 sm:px-2 border-b-2 border-gray-400 dark:border-white bg-white dark:bg-zinc-800",
   links: "flex flex-row",
 };
 
