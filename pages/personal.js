@@ -8,9 +8,7 @@ const Personal = () => {
       <div className={styles.container}>
         <AboutMe />
         <Education />
-        <div>
-          <Contact />
-        </div>
+        <Contact />
       </div>
     </>
   );
