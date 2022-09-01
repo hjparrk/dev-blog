@@ -4,7 +4,7 @@ import { GithubIcon } from "../ui/icons";
 
 const Contact = () => {
   return (
-    <div className="flex flex-col my-20 items-start justify-start max-w-xl">
+    <div className="flex flex-col my-20 mr-5 items-start justify-start max-w-xl">
       <h1 className="text-4xl font-extrabold my-10">Contact</h1>
       <p className="text-xl my-5 font-light flex flex-row">
         Click one of the links blow

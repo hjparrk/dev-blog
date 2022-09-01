@@ -22,7 +22,7 @@ const NavigationBar = () => {
       );
     } else {
       return (
-        <div className="mb-2 border-2 p-1 border-zinc-800 rounded-xl">
+        <div className="mb-2 border-2 p-1 -mr-5 border-zinc-800 rounded-xl">
           <IoMoon
             className="w-5 h-5"
             role="button"
@@ -58,7 +58,7 @@ const NavigationBar = () => {
 
 const styles = {
   navbar:
-    "flex flex-row flex-wrap justify-between mb-20 py-4 lg:px-32 sm:px-20 md:px-20 border-b-2 border-gray-400 dark:border-white bg-white dark:bg-zinc-800",
+    "flex flex-row flex-wrap justify-between mb-20 py-4 lg:px-72 sm:px-20 md:px-20 border-b-2 border-gray-400 dark:border-white bg-white dark:bg-zinc-800",
   links: "flex flex-row",
 };
 

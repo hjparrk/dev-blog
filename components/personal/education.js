@@ -1,6 +1,6 @@
 const Education = (props) => {
   return (
-    <div className="flex flex-col my-10 items-start justify-start max-w-xl mr-10 pr-2">
+    <div className="flex flex-col my-10 items-start justify-start max-w-xl mr-14 pr-2">
       <div className="my-5">
         <h1 className="text-4xl font-extrabold my-10">Education</h1>
         <h3 className="text-xl font-light">2018-07 - 2020.06</h3>
