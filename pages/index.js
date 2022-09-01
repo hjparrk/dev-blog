@@ -35,7 +35,7 @@ const Home = (props) => {
   );
 };
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const aboutItems = await getAllAboutItems();
 
   return {
