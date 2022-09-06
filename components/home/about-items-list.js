@@ -34,9 +34,9 @@ const AboutItemsList = (props) => {
 
 const styles = {
   container_light:
-    "my-10 ml-2 mr-8 p-6 max-w-3xl text-black hover:bg-gray-200 flex flex-col justify-center items-start rounded-3xl",
+    "my-10 p-6 max-w-3xl text-black hover:bg-gray-200 flex flex-col justify-center items-start rounded-3xl",
   container_dark:
-    "my-10 ml-2 mr-8 p-6 max-w-3xl text-white hover:text-black hover:bg-gray-200 flex flex-col justify-center items-start rounded-2xl",
+    "my-10 p-6 max-w-3xl text-white hover:text-black hover:bg-gray-200 flex flex-col justify-center items-start rounded-2xl",
 };
 
 export default AboutItemsList;
