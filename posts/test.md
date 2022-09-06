@@ -39,7 +39,7 @@ In this article, we'll dive into the core concepts and features NextJS has to of
 
 For example, you should understand code like this:
 
-```js
+```javascript
 const basics = 'Okay, that should not be too difficult actually';
 
 function printBasics() {
@@ -49,11 +49,24 @@ function printBasics() {
 printBasics();
 ```
 
+## python code
+
 ```python
 a = 10
 print("hello world")
 if a == 10:
     print("yes")
 ```
+
+> A block quote with ~strikethrough~ and a URL: https://reactjs.org.
+
+- Lists
+- [ ] todo
+- [x] done
+
+A table:
+
+| a   | b   |
+| --- | --- |
 
 ... More content ...

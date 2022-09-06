@@ -1,7 +1,8 @@
 import Image from "next/image";
+import remarkGfm from "remark-gfm";
 import ReactMarkdown from "react-markdown";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
-import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { oneLight } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { getPostData, getPostsFiles } from "../../lib/posts-util";
 
 const Post = (props) => {
@@ -21,6 +22,7 @@ const Post = (props) => {
               alt={image.alt}
               width={600}
               height={300}
+              layout="responsive"
               priority="true"
             />
           </div>
@@ -35,7 +37,13 @@ const Post = (props) => {
       const match = /language-(\w+)/.exec(className || "");
 
       return (
-        <SyntaxHighlighter style={atomDark} language={match[1]}>
+        <SyntaxHighlighter
+          showLineNumbers
+          wrapLines={true}
+          style={oneLight}
+          language={match[1]}
+          customStyle={{ fontSize: "1rem" }}
+        >
           {children}
         </SyntaxHighlighter>
       );
@@ -45,10 +53,12 @@ const Post = (props) => {
   return (
     <div className="flex flex-col h-5/6 justify-center items-center">
       <article className="prose prose-lg dark:prose-invert text-black dark:text-white">
-        <ReactMarkdown components={customComponents}>
+        <ReactMarkdown
+          components={customComponents}
+          remarkPlugins={[remarkGfm]}
+        >
           {post.content}
         </ReactMarkdown>
-        ;
       </article>
     </div>
   );
