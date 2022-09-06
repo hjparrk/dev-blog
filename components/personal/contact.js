@@ -18,7 +18,7 @@ const Contact = () => {
               <GithubIcon />
             </Link>
           </motion.p>
-          <h1>Github - hjparrk</h1>
+          <Link href="https://github.com/hjparrk">Github - hjparrk</Link>
         </div>
       </div>
     </SectionContainer>
