@@ -5,7 +5,7 @@ excerpt: NextJS is a the React framework for production - it makes building full
 isFeatured: true
 ---
 
-![My Selfie](selfie.png)
+![My Selfie](next.png)
 
 # Hello
 
@@ -36,5 +36,24 @@ In this article, we'll dive into the core concepts and features NextJS has to of
 - Much More
 
 ## File-based Routing
+
+For example, you should understand code like this:
+
+```js
+const basics = 'Okay, that should not be too difficult actually';
+
+function printBasics() {
+  console.log(basics):
+}
+
+printBasics();
+```
+
+```python
+a = 10
+print("hello world")
+if a == 10:
+    print("yes")
+```
 
 ... More content ...
