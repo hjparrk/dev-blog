@@ -14,7 +14,7 @@ const Blog = (props) => {
     <div className={styles.container}>
       <div className={styles.innerContainer}>
         <div className="flex flex-row justify-between items-center">
-          <h1 className={styles.title}>All Posts</h1>
+          <h1 className={styles.title}>Featured Posts</h1>
           <button
             className="text-xl p-1 border-2 border-black dark:border-white rounded-2xl"
             type="button"
