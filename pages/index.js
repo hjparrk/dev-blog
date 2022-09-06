@@ -1,7 +1,7 @@
 import { useState } from "react";
 import AboutItemsList from "../components/home/about-items-list";
 import Welcoming from "../components/home/welcoming";
-import { deleteAboutItemByTitle, getAllAboutItems } from "../helpers/api-util";
+import { deleteAboutItemByTitle, getAllAboutItems } from "../lib/api-util";
 
 const Home = (props) => {
   const [showWelcoming, setShowWelcoming] = useState(false);
