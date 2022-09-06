@@ -1,28 +1,67 @@
+import Image from "next/image";
 import ReactMarkdown from "react-markdown";
-import gfm from "remark-gfm";
 import { getPostData, getPostsFiles } from "../../lib/posts-util";
 
 const Post = (props) => {
   const { post } = props;
 
-  console.log(post);
+  const customComponents = {
+    // img(image) {
+    //   console.log("image", image.src);
+    //   return (
+    //     <Image
+    //       src={`/images/posts/${post.slug}/${image.src}`}
+    //       alt={image.alt}
+    //       width={600}
+    //       height={300}
+    //     />
+    //   );
+    // },
+    p(paragraph) {
+      const { node } = paragraph;
 
-  const markdown = `
-  ## hellow
-  A paragraph with *emphasis* and **strong importance**.
+      if (node.children[0].tagName === "img") {
+        const image = node.children[0];
 
-  > A block quote with ~strikethrough~ and a URL: https://reactjs.org.
-  
-  * Lists
-  * [ ] todo
-  * [x] done
-  
-  A table:
-  
-  | a | b |
-  | - | - |
-  `;
-  return <ReactMarkdown>{markdown}</ReactMarkdown>;
+        return (
+          <div>
+            <Image
+              src={`/images/posts/${post.slug}/${image.properties.src}`}
+              alt={image.alt}
+              width={600}
+              height={300}
+              priority="true"
+            />
+          </div>
+        );
+      }
+
+      return <p>{paragraph.children}</p>;
+    },
+    code(code) {
+      const { className, children } = code;
+      const language = className.split("-")[1];
+
+      return (
+        <SyntaxHighlighter
+          style={atomDark}
+          language={language}
+          children={children}
+        />
+      );
+    },
+  };
+
+  return (
+    <div className="flex flex-col h-5/6 justify-center items-center">
+      <article className="prose prose-lg dark:prose-invert text-black dark:text-white">
+        <ReactMarkdown components={customComponents}>
+          {post.content}
+        </ReactMarkdown>
+        ;
+      </article>
+    </div>
+  );
 };
 
 export function getStaticProps(context) {
