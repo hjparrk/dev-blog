@@ -4,18 +4,19 @@ import AboutMe from "../components/personal/about-me";
 
 const Personal = () => {
   return (
-    <>
-      <div className={styles.container}>
+    <div className={styles.container}>
+      <div className={styles.innerContainer}>
         <AboutMe />
         <Education />
         <Contact />
       </div>
-    </>
+    </div>
   );
 };
 
 const styles = {
-  container: "flex flex-col justify-center items-center",
+  container: "flex flex-col h-5/6 justify-center items-center mt-28",
+  innerContainer: "m-auto text-left w-3/5",
 };
 
 export default Personal;

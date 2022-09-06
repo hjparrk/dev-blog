@@ -1,25 +1,36 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { GithubIcon } from "../ui/icons";
+import SectionContainer from "./section-container";
 
 const Contact = () => {
   return (
-    <div className="flex flex-col my-20 mr-5 items-start justify-start max-w-xl">
-      <h1 className="text-4xl font-extrabold my-10">Contact</h1>
-      <p className="text-xl my-5 font-light flex flex-row">
+    <SectionContainer>
+      <h1 className={styles.title}>Contact</h1>
+      <h1 className={styles.description}>
         Click one of the links blow
         &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-      </p>
-      <p className="text-xl my-1 font-light flex flex-row">
-        <motion.span whileHover={{ scale: 1.3 }} className="mr-5 mt-0.5">
-          <Link href="https://github.com/hjparrk" passHref>
-            <GithubIcon />
-          </Link>
-        </motion.span>
-        Github - hjparrk
-      </p>
-    </div>
+      </h1>
+      <div className={styles.link}>
+        <div className={styles.linkWithIcon}>
+          <motion.p whileHover={{ scale: 1.3 }} className={styles.icon}>
+            <Link href="https://github.com/hjparrk" passHref>
+              <GithubIcon />
+            </Link>
+          </motion.p>
+          <h1>Github - hjparrk</h1>
+        </div>
+      </div>
+    </SectionContainer>
   );
+};
+
+const styles = {
+  title: "text-4xl font-extrabold mb-10",
+  description: "text-xl font-light mb-5",
+  link: "mb-2 text-xl font-light",
+  linkWithIcon: "flex flex-row",
+  icon: "text-xl font-light mr-3",
 };
 
 export default Contact;
