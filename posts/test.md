@@ -2,7 +2,7 @@
 title: "Test"
 date: "2022-10-16"
 image: "main.jpg"
-summary: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+summary: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
 isFeatured: true
 languages: ["JavaScript", "HTML", "CSS"]
 ---

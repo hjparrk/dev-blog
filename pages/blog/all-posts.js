@@ -1,13 +1,11 @@
 import { useRouter } from "next/router";
-import FeaturedPosts from "../../components/blog/featured-posts";
-import { getFeaturedPosts } from "../../lib/posts-util";
+import AllPostsList from "../../components/blog/all-posts-list";
+import { getAllPosts } from "../../lib/posts-util";
 
-const Blog = (props) => {
+const AllPosts = (props) => {
   const router = useRouter();
-  const { featuredPosts } = props;
-
   const clickHandler = () => {
-    router.push("/blog/all-posts");
+    router.push("/blog");
   };
 
   return (
@@ -20,10 +18,10 @@ const Blog = (props) => {
             type="button"
             onClick={clickHandler}
           >
-            All Posts
+            Featured Posts
           </button>
         </div>
-        <FeaturedPosts featuredPosts={featuredPosts} />
+        <AllPostsList posts={props.posts} />
       </div>
     </div>
   );
@@ -36,13 +34,13 @@ const styles = {
 };
 
 export function getStaticProps() {
-  const featuredPosts = getFeaturedPosts();
+  const allPosts = getAllPosts();
 
   return {
     props: {
-      featuredPosts: featuredPosts,
+      posts: allPosts,
     },
   };
 }
 
-export default Blog;
+export default AllPosts;

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const PostCard = (props) => {
   const { post } = props;
@@ -24,7 +25,10 @@ const PostCard = (props) => {
   );
 
   return (
-    <li className="mb-32">
+    <motion.li
+      whileHover={{ scale: 1.1 }}
+      className="mb-28 p-6 hover:bg-gray-200 text-black dark:text-white dark:hover:text-black rounded-3xl"
+    >
       <Link href={linkPath}>
         <a>
           <div className="flex flex-row">
@@ -33,7 +37,7 @@ const PostCard = (props) => {
                 src={imagePath}
                 width={360}
                 height={250}
-                layout="fixed"
+                layout="responsive"
                 alt={post.title}
                 className="rounded-xl"
                 priority={true}
@@ -42,13 +46,13 @@ const PostCard = (props) => {
             <div className="flex-1">
               {formattedDate}
               {languageList}
-              <h1 className="text-3xl font-semibold mb-3">{post.title}</h1>
-              <h1 className="text-xl font-light mb-3">{post.summary}</h1>
+              <h1 className="text-3xl font-extrabold mb-3">{post.title}</h1>
+              <h1 className="text-xl font-light">{post.summary}</h1>
             </div>
           </div>
         </a>
       </Link>
-    </li>
+    </motion.li>
   );
 };
 
