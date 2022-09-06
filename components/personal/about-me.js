@@ -7,11 +7,11 @@ const AboutMe = () => {
       <p className={styles.description}>
         I&apos;m a student developer based in Seoul, Korea and Sydney,
         Australia. I spend most of time developing my dev-blog using React.js
-        and a fullstack React framework Next.js as of Aug, 2022.
+        and a fullstack React framework Next.js since August, 2022.
       </p>
       <p className={styles.description}>
-        During the time at university, I have accumulated numerous practical
-        experiences of implementing data structures and algorithms, and
+        During the time at university, I have accumulated lots of practical
+        experiences of implementing data structures and algorithms with
         programming skills of Python, Java, and C.
       </p>
     </SectionContainer>

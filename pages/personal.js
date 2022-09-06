@@ -15,7 +15,7 @@ const Personal = () => {
 };
 
 const styles = {
-  container: "flex flex-col h-5/6 justify-center items-center mt-28",
+  container: "flex flex-col h-5/6 justify-center items-center -mt-6",
   innerContainer: "m-auto text-left max-w-4xl",
 };
 
