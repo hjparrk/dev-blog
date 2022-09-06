@@ -31,10 +31,11 @@ const Post = (props) => {
     },
     code(code) {
       const { className, children } = code;
-      const language = className.split("-")[1];
+
+      const match = /language-(\w+)/.exec(className || "");
 
       return (
-        <SyntaxHighlighter style={atomDark} language={language}>
+        <SyntaxHighlighter style={atomDark} language={match[1]}>
           {children}
         </SyntaxHighlighter>
       );
