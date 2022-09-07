@@ -1,27 +1,35 @@
-import { useRouter } from "next/router";
-import AllPostsList from "../../components/blog/all-posts-list";
+import { useEffect, useState } from "react";
 import { getAllPosts } from "../../lib/posts-util";
+import AllPostsList from "../../components/blog/all-posts-list";
+import LanguageForm from "../../components/blog/language-form";
 
 const AllPosts = (props) => {
-  const router = useRouter();
-  const clickHandler = () => {
-    router.push("/blog");
+  const [selectedLanguage, setSelectedLanguage] = useState("all");
+
+  const { posts } = props;
+
+  const changeHandler = (e) => {
+    e.preventDefault();
+    setSelectedLanguage(e.currentTarget.value);
   };
+
+  useEffect(() => {
+    console.log(selectedLanguage);
+  }, [selectedLanguage]);
 
   return (
     <div className={styles.container}>
       <div className={styles.innerContainer}>
         <div className="flex flex-row justify-between items-center">
-          <h1 className={styles.title}>All Posts</h1>
-          <button
-            className="text-xl p-1 border-2 border-black dark:border-white rounded-2xl"
-            type="button"
-            onClick={clickHandler}
-          >
-            Featured Posts
-          </button>
+          <h1 className={styles.title}>
+            {selectedLanguage === "all" ? "All Posts" : selectedLanguage}
+          </h1>
+          <div className="flex flex-row">
+            <h1 className="mr-2">filtered by</h1>
+            <LanguageForm onChange={changeHandler} />
+          </div>
         </div>
-        <AllPostsList posts={props.posts} />
+        <AllPostsList posts={posts} selectedLanguage={selectedLanguage} />
       </div>
     </div>
   );
@@ -30,7 +38,7 @@ const AllPosts = (props) => {
 const styles = {
   container: "flex flex-col h-5/6 justify-center items-center mt-28",
   innerContainer: "m-auto text-left max-w-2xl",
-  title: "text-4xl font-extrabold my-14 px-6",
+  title: "text-4xl font-extrabold my-14",
 };
 
 export function getStaticProps() {

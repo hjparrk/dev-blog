@@ -25,34 +25,35 @@ const PostCard = (props) => {
   );
 
   return (
-    <motion.li
+    <motion.div
+      className="mb-24 p-3 shadow-lg dark:shadow-gray-600 hover:bg-gray-200 text-black dark:text-white dark:hover:text-black rounded-3xl"
       whileHover={{ scale: 1.1 }}
-      className="mb-28 p-6 hover:bg-gray-200 text-black dark:text-white dark:hover:text-black rounded-3xl"
+      whileTap={{ scale: 1 }}
     >
       <Link href={linkPath}>
         <a>
           <div className="flex flex-row">
-            <div className="flex-1 mr-5">
+            <div className="flex-1">
               <Image
                 src={imagePath}
-                width={360}
-                height={250}
+                width={400}
+                height={260}
                 layout="responsive"
                 alt={post.title}
-                className="rounded-xl"
+                className="rounded-3xl"
                 priority={true}
               />
             </div>
-            <div className="flex-1">
-              {formattedDate}
-              {languageList}
-              <h1 className="text-3xl font-extrabold mb-3">{post.title}</h1>
-              <h1 className="text-xl font-light">{post.summary}</h1>
+            <div className="flex-1 pl-5 pr-3 pt-8 pb-2 ">
+              <div className=" text-sm">{formattedDate}</div>
+              <div className=" text-base">{languageList}</div>
+              <h1 className=" text-2xl font-extrabold pb-2">{post.title}</h1>
+              <h1 className="text-lg font-base">{post.summary}</h1>
             </div>
           </div>
         </a>
       </Link>
-    </motion.li>
+    </motion.div>
   );
 };
 

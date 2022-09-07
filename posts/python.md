@@ -1,7 +1,7 @@
 ---
 title: "Python"
 date: "2022-10-16"
-image: "main.jpg"
+image: "main.png"
 summary: Data structures with Python
 isFeatured: true
 languages: ["Python"]

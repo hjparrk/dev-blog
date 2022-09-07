@@ -1,10 +1,10 @@
 ---
-title: "Test"
+title: "React"
 date: "2022-10-16"
-image: "main.jpg"
+image: "main.png"
 summary: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
 isFeatured: true
-languages: ["JavaScript", "HTML", "CSS"]
+languages: ["JavaScript", "React"]
 ---
 
 ![My Selfie](next.png)
