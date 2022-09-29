@@ -4,7 +4,7 @@ date: "2022-10-16"
 image: "main.png"
 summary: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
 isFeatured: true
-languages: ["JavaScript", "React"]
+languages: ["JavaScript", "React", "Greedy"]
 ---
 
 ![My Selfie](next.png)

@@ -21,6 +21,9 @@ const LanguageForm = (props) => {
         <option value="Java">Java</option>
         <option value="C">C</option>
       </optgroup>
+      <optgroup label="Algorithms">
+        <option value="Greedy">Greedy</option>
+      </optgroup>
     </select>
   );
 };
